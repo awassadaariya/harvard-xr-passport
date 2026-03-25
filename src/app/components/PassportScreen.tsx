@@ -3,14 +3,14 @@ import { Award, Lock } from 'lucide-react';
 import { LogoHeader } from './Logo';
 
 const allBooths = [
-  { id: '109', name: 'Room 109', icon: '🎮' },
-  { id: 'rm01', name: 'RM 01', icon: '🥽' },
-  { id: 'rm02', name: 'RM 02', icon: '📱' },
-  { id: 'chauhaus', name: 'Chauhaus', icon: '☕' },
-  { id: '124', name: 'Room 124', icon: '🌐' },
-  { id: 'sc01', name: 'SC 01', icon: '💼' },
-  { id: 'sc02', name: 'SC 02', icon: '💡' },
-  { id: 'sc03', name: 'SC 03', icon: '🚀' }
+  { id: '109', name: 'Interactive XR Demos', icon: '🎮' },
+  { id: 'rm01', name: 'VR Experience Zone', icon: '🥽' },
+  { id: 'rm02', name: 'AR Development Showcase', icon: '📱' },
+  { id: 'chauhaus', name: 'Networking & Refreshments', icon: '☕' },
+  { id: '124', name: 'Spatial Computing Demos', icon: '🌐' },
+  { id: 'sc01', name: 'Partner Showcase', icon: '💼' },
+  { id: 'sc02', name: 'Innovation Corner', icon: '💡' },
+  { id: 'sc03', name: 'Tech Showcase Station', icon: '🚀' }
 ];
 
 interface PassportScreenProps {
@@ -28,7 +28,7 @@ export function PassportScreen({ collectedStamps }: PassportScreenProps) {
 
         {/* Passport Title */}
         <div className="flex items-center gap-3 mt-5 mb-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8B3A62] to-[#7A2E4D] flex items-center justify-center">
             <Award className="w-5 h-5 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-white">Passport</h1>
@@ -41,7 +41,7 @@ export function PassportScreen({ collectedStamps }: PassportScreenProps) {
               key={booth.id}
               className={`w-2 h-2 rounded-full transition-colors ${
                 collectedStamps.includes(booth.id)
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500'
+                  ? 'bg-gradient-to-r from-[#8B3A62] to-[#7A2E4D]'
                   : 'bg-gray-600'
               }`}
               initial={{ scale: 0 }}
@@ -67,7 +67,7 @@ export function PassportScreen({ collectedStamps }: PassportScreenProps) {
               key={booth.id}
               className={`relative rounded-2xl p-5 aspect-[4/5] flex flex-col items-center justify-center transition-all ${
                 isCollected
-                  ? 'bg-gradient-to-br from-purple-500/25 to-pink-500/25 border border-purple-400/40 shadow-lg shadow-purple-500/10'
+                  ? 'bg-gradient-to-br from-[#7A2E4D]/25 to-[#8B3A62]/22 border border-[#A8557A]/35 shadow-lg shadow-black/15'
                   : 'bg-gray-800/40 border border-gray-700/50'
               }`}
               initial={{ opacity: 0, y: 20 }}
@@ -128,14 +128,14 @@ export function PassportScreen({ collectedStamps }: PassportScreenProps) {
       {/* Completion Message */}
       {collectedStamps.length === totalBooths && (
         <motion.div
-          className="mt-6 p-5 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/40 rounded-2xl text-center"
+          className="mt-6 p-5 bg-gradient-to-br from-[#7A2E4D]/20 to-[#8B3A62]/16 border border-[#A8557A]/30 rounded-2xl text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <div className="text-4xl mb-2">🎉</div>
           <h3 className="text-lg font-bold text-white mb-1">Passport Complete!</h3>
           <p className="text-gray-300 text-sm">
-            You've visited all booths at HXR Conference 2026
+            You've visited all booths at the conference
           </p>
         </motion.div>
       )}

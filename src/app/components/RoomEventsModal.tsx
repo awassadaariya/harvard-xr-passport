@@ -52,7 +52,7 @@ export function RoomEventsModal({
         </div>
 
         {/* Room Image with Overlay */}
-        <div className="relative h-44 bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-end overflow-hidden">
+        <div className="relative h-44 bg-gradient-to-br from-[rgba(122,46,77,0.22)] to-[rgba(139,58,98,0.18)] flex items-end overflow-hidden">
           <ImageWithFallback
             src={getRoomImage(room.id)}
             alt={room.name}
@@ -94,7 +94,7 @@ export function RoomEventsModal({
               onClick={() => onEventClick?.(event)}
             >
               <div className="flex items-start gap-4">
-                <div className="text-pink-400 text-sm font-medium whitespace-nowrap pt-0.5 min-w-[105px]">
+                <div className="text-[#C4849E] text-sm font-medium whitespace-nowrap pt-0.5 min-w-[105px]">
                   {event.time}
                 </div>
                 <div className="flex-1">
@@ -123,7 +123,7 @@ export function RoomEventsModal({
               className={`w-full py-3 px-4 rounded-xl font-semibold text-sm transition-all ${
                 isStampCollected
                   ? 'bg-green-500 text-white cursor-default'
-                  : 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/20'
+                  : 'bg-gradient-to-r from-[#8B3A62] to-[#7A2E4D] text-white shadow-lg shadow-black/20'
               }`}
               whileTap={!isStampCollected ? { scale: 0.98 } : {}}
             >

@@ -25,7 +25,8 @@ export function VotingPage({ onBack, selectedVote, onVote }: VotingPageProps) {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-pink-900/20 z-50 overflow-y-auto"
+      className="absolute inset-0 z-50 overflow-y-auto"
+      style={{ background: 'linear-gradient(135deg, #111827 0%, rgba(122, 46, 77, 0.15) 50%, rgba(139, 58, 98, 0.12) 100%)' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -57,7 +58,7 @@ export function VotingPage({ onBack, selectedVote, onVote }: VotingPageProps) {
             transition={{ delay: index * 0.05 }}
           >
             {/* Project Image */}
-            <div className="relative h-40 bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-center justify-center overflow-hidden">
+            <div className="relative h-40 bg-gradient-to-br from-[rgba(122,46,77,0.22)] to-[rgba(139,58,98,0.18)] flex items-center justify-center overflow-hidden">
               <ImageWithFallback
                 src={project.imageUrl}
                 alt={project.title}
@@ -69,7 +70,7 @@ export function VotingPage({ onBack, selectedVote, onVote }: VotingPageProps) {
             {/* Project Info */}
             <div className="p-5">
               <h3 className="text-lg font-bold text-white mb-1">{project.title}</h3>
-              <p className="text-purple-400 text-sm font-medium mb-2">{project.team}</p>
+              <p className="text-[#C4849E] text-sm font-medium mb-2">{project.team}</p>
               <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
                 {project.description}
               </p>
@@ -79,7 +80,7 @@ export function VotingPage({ onBack, selectedVote, onVote }: VotingPageProps) {
                 onClick={() => handleVote(project.id)}
                 className={`w-full py-3 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all ${
                   isVoted(project.id)
-                    ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/30'
+                    ? 'bg-gradient-to-r from-[#8B3A62] to-[#7A2E4D] text-white shadow-lg shadow-black/20'
                     : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                 }`}
                 whileTap={{ scale: 0.95 }}

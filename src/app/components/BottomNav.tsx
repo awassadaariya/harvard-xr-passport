@@ -17,7 +17,7 @@ const navItems = [
 export function BottomNav({ currentScreen, onScreenChange }: BottomNavProps) {
   return (
     <div className="absolute bottom-0 left-0 right-0 z-20 px-4 pb-4">
-      <div className="bg-[#1a1a2e]/95 backdrop-blur-xl rounded-[2rem] border border-purple-500/20 shadow-[0_-4px_30px_rgba(139,92,246,0.15)] overflow-hidden">
+      <div className="bg-[#1a1a2e]/95 backdrop-blur-xl rounded-[2rem] border border-[#8B3A62]/25 shadow-[0_-4px_30px_rgba(139,58,98,0.12)] overflow-hidden">
         <div className="flex items-center justify-around p-1.5">
           {navItems.map((item) => {
             const isActive = currentScreen === item.id;
@@ -32,7 +32,11 @@ export function BottomNav({ currentScreen, onScreenChange }: BottomNavProps) {
               >
                 {isActive && (
                   <motion.div
-                    className="absolute inset-1 bg-gradient-to-r from-purple-600/40 to-pink-600/40 rounded-2xl border border-purple-400/30 shadow-[0_0_20px_rgba(168,85,247,0.4)]"
+                    className="absolute inset-1 rounded-2xl border border-[#A8557A]/40"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(139, 58, 98, 0.35) 0%, rgba(122, 46, 77, 0.35) 100%)',
+                      boxShadow: '0 0 10px rgba(139, 58, 98, 0.16), inset 0 1px 0 rgba(255,255,255,0.04)'
+                    }}
                     layoutId="activeTab"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />

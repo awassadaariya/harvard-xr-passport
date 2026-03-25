@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import mapSvg from '../../imports/map.svg';
+import mapSvg from '../../../assets/map.svg';
 
 interface SVGFloorMapProps {
   onRoomClick: (roomId: string) => void;
@@ -8,35 +8,53 @@ interface SVGFloorMapProps {
 }
 
 // Room clickable regions using exact SVG coordinates from the design reference
-// SVG viewBox is 393x623
+// SVG viewBox is 359x545 (updated from assets/map.svg)
 const rooms = [
-  { id: '109', name: '109', cx: 123.52, cy: 70.14, renderSvg: () => (
-      <rect x="90.1638" y="106.924" width="73.5705" height="66.7082" transform="rotate(-90 90.1638 106.924)" fill="#94B3ED" />
-  )},
-  { id: 'piper', name: 'Room 01', cx: 284.9, cy: 97.9, renderSvg: () => (
-      <path d="M218.314 34.2029H351.513V161.688H322.938V198.172H218.314V34.2029Z" fill="#F398C0" />
-  )},
-  { id: 'rm01', name: 'Room 02', cx: 84.92, cy: 204.06, renderSvg: () => (
-      <rect x="37.0216" y="262.078" width="116.04" height="95.7944" transform="rotate(-90 37.0216 262.078)" fill="#F398C0" />
-  )},
-  { id: 'rm02', name: 'Room 03', cx: 69.00, cy: 318.65, renderSvg: () => (
-      <rect x="36.8704" y="375.229" width="113.164" height="64.2656" transform="rotate(-90 36.8704 375.229)" fill="#F398C0" />
-  )},
-  { id: 'chauhaus', name: 'Chauhaus', cx: 63.26, cy: 430.72, renderSvg: () => (
-      <rect x="25.3956" y="486.224" width="110.994" height="75.7232" transform="rotate(-90 25.3956 486.224)" fill="#F9CBDF" />
-  )},
-  { id: '124', name: '124', cx: 254.16, cy: 525.68, renderSvg: () => (
-      <rect x="204.894" y="549.655" width="47.9294" height="98.5313" transform="rotate(-90 204.894 549.655)" fill="#CAD9F6" />
-  )},
-  { id: 'sc01', name: 'showcase\n01', cx: 128.68, cy: 595.60, renderSvg: () => (
-      <rect x="99.9914" y="623" width="54.7954" height="57.38" transform="rotate(-90 99.9914 623)" fill="#94B3ED" />
-  )},
-  { id: 'sc02', name: 'showcase\n02', cx: 194.09, cy: 595.60, renderSvg: () => (
-      <rect x="157.369" y="623" width="54.7954" height="73.4464" transform="rotate(-90 157.369 623)" fill="#94B3ED" />
-  )},
-  { id: 'sc03', name: 'showcase\n03', cx: 258.36, cy: 586.07, renderSvg: () => (
-      <rect x="230.818" y="623" width="73.8547" height="55.0848" transform="rotate(-90 230.818 623)" fill="#94B3ED" />
-  )}
+  {
+    id: '109', name: '109', cx: 112.8, cy: 61.2, renderSvg: () => (
+      <rect x="82.6284" y="93.3656" width="64.2414" height="60.4625" transform="rotate(-90 82.6284 93.3656)" fill="#3B4165" />
+    )
+  },
+  {
+    id: 'piper', name: 'Room 01', cx: 259.1, cy: 101.5, renderSvg: () => (
+      <path d="M198.78 29.8657H319.508V141.185H293.608V173.043H198.78V29.8657Z" fill="#5D425F" />
+    )
+  },
+  {
+    id: 'rm01', name: 'Room 02', cx: 77.9, cy: 178.2, renderSvg: () => (
+      <rect x="34.4619" y="228.845" width="101.325" height="86.8254" transform="rotate(-90 34.4619 228.845)" fill="#673E5D" />
+    )
+  },
+  {
+    id: 'rm02', name: 'Room 03', cx: 63.4, cy: 278.2, renderSvg: () => (
+      <rect x="34.3247" y="327.648" width="98.8145" height="58.2486" transform="rotate(-90 34.3247 327.648)" fill="#5C3854" />
+    )
+  },
+  {
+    id: 'chauhaus', name: 'Chauhaus', cx: 58.2, cy: 376.1, renderSvg: () => (
+      <rect x="23.9243" y="424.568" width="96.9197" height="68.6334" transform="rotate(-90 23.9243 424.568)" fill="#805F74" />
+    )
+  },
+  {
+    id: '124', name: '124', cx: 231.3, cy: 459.0, renderSvg: () => (
+      <rect x="186.616" y="479.955" width="41.8517" height="89.3061" transform="rotate(-90 186.616 479.955)" fill="#777590" />
+    )
+  },
+  {
+    id: 'sc01', name: 'showcase\n01', cx: 117.5, cy: 520.1, renderSvg: () => (
+      <rect x="91.5361" y="544" width="47.847" height="52.0077" transform="rotate(-90 91.5361 544)" fill="#64698D" />
+    )
+  },
+  {
+    id: 'sc02', name: 'showcase\n02', cx: 176.8, cy: 520.1, renderSvg: () => (
+      <rect x="143.542" y="544" width="47.847" height="66.5698" transform="rotate(-90 143.542 544)" fill="#60698E" />
+    )
+  },
+  {
+    id: 'sc03', name: 'showcase\n03', cx: 235.1, cy: 511.8, renderSvg: () => (
+      <rect x="210.113" y="544" width="64.4895" height="49.9273" transform="rotate(-90 210.113 544)" fill="#5A6186" />
+    )
+  }
 ];
 
 export function SVGFloorMap({ onRoomClick, highlightedRoomId }: SVGFloorMapProps) {
@@ -54,7 +72,7 @@ export function SVGFloorMap({ onRoomClick, highlightedRoomId }: SVGFloorMapProps
 
       {/* Interactive Precise Overlays */}
       <div className="absolute inset-0">
-        <svg viewBox="0 0 393 623" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 359 545" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
           {rooms.map((room) => {
             const isHighlighted = highlightedRoomId === room.id;
             const isHovered = hoveredId === room.id;
@@ -69,7 +87,7 @@ export function SVGFloorMap({ onRoomClick, highlightedRoomId }: SVGFloorMapProps
                 onMouseLeave={() => setHoveredId(null)}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
-                style={{ 
+                style={{
                   transformOrigin: `${room.cx}px ${room.cy}px`
                 }}
               >
@@ -77,14 +95,14 @@ export function SVGFloorMap({ onRoomClick, highlightedRoomId }: SVGFloorMapProps
                   Drop shadow filter and active state
                   The base shapes match the bright solid colors from the design reference.
                 */}
-                <g style={{ 
-                  filter: isActive 
-                    ? 'drop-shadow(0px 0px 8px rgba(255,255,255,0.6)) brightness(1.15)' 
+                <g style={{
+                  filter: isActive
+                    ? 'drop-shadow(0px 0px 8px rgba(255,255,255,0.6)) brightness(1.15)'
                     : 'drop-shadow(3px 3px 6px rgba(0,0,0,0.4))',
                   transition: 'all 0.2s ease'
                 }}>
                   {room.renderSvg()}
-                  
+
                   {/* Pulse effect when highlighted */}
                   {isHighlighted && (
                     <motion.rect
@@ -110,13 +128,13 @@ export function SVGFloorMap({ onRoomClick, highlightedRoomId }: SVGFloorMapProps
                   fontSize="12"
                   fontWeight="bold"
                   fontFamily="Inter, sans-serif"
-                  fill="black"
+                  fill="white"
                   style={{ pointerEvents: 'none', letterSpacing: '-0.3px' }}
                 >
                   {room.name.split('\n').map((line, i, arr) => (
-                    <tspan 
-                      key={i} 
-                      x={room.cx} 
+                    <tspan
+                      key={i}
+                      x={room.cx}
                       dy={i === 0 && arr.length > 1 ? '-0.6em' : (i > 0 ? '1.2em' : '0')}
                     >
                       {line}
@@ -126,7 +144,7 @@ export function SVGFloorMap({ onRoomClick, highlightedRoomId }: SVGFloorMapProps
               </motion.g>
             );
           })}
-          
+
           <defs>
             <radialGradient id="pulse-gradient">
               <stop offset="0%" stopColor="white" stopOpacity="0.8" />

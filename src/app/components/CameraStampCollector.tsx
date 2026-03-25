@@ -51,10 +51,10 @@ export function CameraStampCollector({ onCapture, onClose }: CameraStampCollecto
               {/* Target Frame */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
-                  className="w-64 h-64 border-2 border-purple-500 rounded-2xl relative"
+                  className="w-64 h-64 border-2 border-[#8B3A62] rounded-2xl relative"
                   animate={{
                     scale: [1, 1.05, 1],
-                    borderColor: ['#a855f7', '#ec4899', '#a855f7']
+                    borderColor: ['#7A2E4D', '#A8557A', '#7A2E4D']
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
@@ -99,7 +99,7 @@ export function CameraStampCollector({ onCapture, onClose }: CameraStampCollecto
           <div className="bg-black/90 backdrop-blur-xl px-6 py-8 flex items-center justify-center border-t border-white/10">
             <motion.button
               onClick={handleCapture}
-              className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center shadow-2xl"
+              className="w-20 h-20 rounded-full bg-gradient-to-r from-[#8B3A62] to-[#7A2E4D] flex items-center justify-center shadow-2xl shadow-black/30"
               whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
             >

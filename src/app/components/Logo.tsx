@@ -12,20 +12,10 @@ export function Logo({ className = 'h-6' }: LogoProps) {
   );
 }
 
-interface LogoHeaderProps {
-  showTitle?: boolean;
-}
-
-export function LogoHeader({ showTitle = true }: LogoHeaderProps) {
+export function LogoHeader() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center">
       <Logo className="h-8 w-auto" />
-      {showTitle && (
-        <div className="flex flex-col">
-          <span className="text-white font-bold text-lg leading-tight">HXR Conference 2026</span>
-          <span className="text-purple-300 text-xs font-medium">XR +: From Pixel to Voxel</span>
-        </div>
-      )}
     </div>
   );
 }

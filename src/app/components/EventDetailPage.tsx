@@ -68,7 +68,7 @@ export function EventDetailPage({
         >
           {/* Time */}
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center shadow-lg shadow-purple-500/30">
+            <div className="w-10 h-10 rounded-full bg-[#7A2E4D] flex items-center justify-center shadow-lg shadow-black/20">
               <Clock className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -79,7 +79,7 @@ export function EventDetailPage({
 
           {/* Location */}
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center shadow-lg shadow-pink-500/30">
+            <div className="w-10 h-10 rounded-full bg-[#8B3A62] flex items-center justify-center shadow-lg shadow-black/20">
               <MapPin className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -129,14 +129,14 @@ export function EventDetailPage({
                   className="bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/10 p-4"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 via-pink-500 to-purple-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 via-[#A8557A] to-[#7A2E4D] flex items-center justify-center flex-shrink-0 shadow-lg shadow-black/20">
                       <User className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-base font-semibold text-white">
                         {speaker.name}
                       </h3>
-                      <p className="text-sm text-pink-400">{speaker.title}</p>
+                      <p className="text-sm text-[#C4849E]">{speaker.title}</p>
                       {speaker.company && (
                         <p className="text-xs text-gray-400 mt-0.5">{speaker.company}</p>
                       )}
@@ -160,7 +160,7 @@ export function EventDetailPage({
             className={`w-full py-4 px-6 rounded-2xl font-semibold text-base transition-all ${
               isStampCollected
                 ? 'bg-green-500 text-white cursor-default shadow-lg shadow-green-500/30'
-                : 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-xl shadow-pink-500/30 hover:shadow-2xl'
+                : 'bg-gradient-to-r from-[#8B3A62] to-[#7A2E4D] text-white shadow-xl shadow-black/25 hover:shadow-2xl'
             }`}
             whileTap={!isStampCollected ? { scale: 0.98 } : {}}
           >

@@ -57,7 +57,7 @@ export function InteractiveMapScreen({
       </div>
 
       {/* Map Container - Full height */}
-      <div className="absolute inset-0 pt-20 pb-20">
+      <div className="absolute inset-0 pt-20 pb-20 z-10">
         <SVGFloorMap
           onRoomClick={handleRegionClick}
           highlightedRoomId={highlightedId}

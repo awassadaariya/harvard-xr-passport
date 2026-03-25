@@ -15,7 +15,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
 
   return (
     <motion.div
-      className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-pink-900/20 z-50 overflow-y-auto"
+      className="absolute inset-0 bg-gradient-to-br from-gray-900 via-[#2a1d26]/40 to-[#3a1f2d]/35 z-50 overflow-y-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -25,7 +25,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
       <div className="sticky top-0 z-10 bg-gray-900/90 backdrop-blur-xl border-b border-white/10 px-6 py-4">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
+          className="flex items-center gap-2 text-white hover:text-[#C4849E] transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
           <span className="font-medium">Back</span>
@@ -36,7 +36,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
       <div className="px-6 py-8 pb-24 space-y-6">
         {/* Hero Profile Card */}
         <motion.div
-          className="relative bg-gradient-to-br from-purple-600/40 via-pink-600/30 to-purple-600/40 backdrop-blur-xl rounded-3xl border border-white/20 overflow-hidden shadow-2xl"
+          className="relative bg-gradient-to-br from-[#7A2E4D]/45 via-[#8B3A62]/30 to-[#7A2E4D]/45 backdrop-blur-xl rounded-3xl border border-white/20 overflow-hidden shadow-2xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -45,7 +45,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
             {/* Profile Avatar */}
             <div className="flex flex-col items-center mb-6">
               <div className="relative mb-4">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-orange-400 via-pink-500 to-purple-500 flex items-center justify-center shadow-2xl ring-4 ring-white/20">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-orange-400 via-[#A8557A] to-[#7A2E4D] flex items-center justify-center shadow-2xl ring-4 ring-white/20">
                   <User className="w-12 h-12 text-white" />
                 </div>
                 {/* Achievement badge */}
@@ -55,11 +55,11 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
               </div>
 
               <h1 className="text-2xl font-bold text-white mb-1 text-center">Alex Johnson</h1>
-              <p className="text-purple-200 text-sm mb-4">Conference Attendee</p>
+              <p className="text-[#E7CAD8] text-sm mb-4">Conference Attendee</p>
             </div>
 
             {/* Email */}
-            <div className="flex items-center justify-center gap-2 text-purple-100 bg-white/10 rounded-xl py-3 px-4">
+            <div className="flex items-center justify-center gap-2 text-white/90 bg-white/10 rounded-xl py-3 px-4">
               <Mail className="w-4 h-4" />
               <span className="text-sm">alex.johnson@email.com</span>
             </div>
@@ -74,7 +74,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
         >
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-bold text-white">Your Activity</h2>
-            <Sparkles className="w-5 h-5 text-purple-400" />
+            <Sparkles className="w-5 h-5 text-[#A8557A]" />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -92,7 +92,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
                 <p className="text-gray-400 text-xs font-medium">Stamps Collected</p>
                 <div className="w-full mt-3 bg-gray-700/50 rounded-full h-1 overflow-hidden">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-purple-500 to-purple-400"
+                    className="h-full bg-gradient-to-r from-[#8B3A62] to-[#A8557A]"
                     initial={{ width: 0 }}
                     animate={{ width: `${stampProgress}%` }}
                     transition={{ delay: 0.5, duration: 1 }}
@@ -110,12 +110,12 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
               transition={{ type: 'spring', stiffness: 400, damping: 25 }}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/30 to-pink-600/30 flex items-center justify-center mb-3 border border-pink-500/30">
-                  <Heart className="w-6 h-6 text-pink-400" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B3A62]/30 to-[#7A2E4D]/30 flex items-center justify-center mb-3 border border-[#A8557A]/30">
+                  <Heart className="w-6 h-6 text-[#C4849E]" />
                 </div>
                 <span className="text-3xl font-bold text-white mb-1">{hasVoted ? 1 : 0}</span>
                 <p className="text-gray-400 text-xs font-medium">Projects Voted</p>
-                <p className="text-pink-400 text-xs mt-2 font-medium">
+                <p className="text-[#C4849E] text-xs mt-2 font-medium">
                   {hasVoted ? 'Change vote' : 'Start voting!'}
                 </p>
               </div>
@@ -143,7 +143,7 @@ export function ProfilePage({ onBack, collectedStamps, selectedVote, onNavigateT
           transition={{ delay: 0.5 }}
         >
           <p className="text-gray-500 text-xs">
-            HXR Conference 2026 · v1.0.0
+            v1.0.0
           </p>
         </motion.div>
       </div>

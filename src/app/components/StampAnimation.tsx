@@ -12,7 +12,7 @@ export function StampAnimation() {
       >
         {/* Stamp Circle */}
         <motion.div
-          className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-2xl"
+          className="w-32 h-32 rounded-full bg-gradient-to-br from-[#8B3A62] to-[#7A2E4D] flex items-center justify-center shadow-2xl shadow-black/25"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -23,7 +23,7 @@ export function StampAnimation() {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-purple-400"
+            className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-[#C4849E]"
             style={{
               x: '-50%',
               y: '-50%',

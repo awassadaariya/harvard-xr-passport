@@ -9,6 +9,7 @@ import { VotingPage } from './components/VotingPage';
 import { ProfilePage } from './components/ProfilePage';
 import { RoomEventsModal } from './components/RoomEventsModal';
 import { Event, getRoomById } from './data/eventData';
+import harvardBg from '../imports/harvard_bg.jpg';
 
 type Screen = 'map' | 'schedule' | 'passport';
 type Page = 'main' | 'event' | 'voting' | 'profile';
@@ -58,25 +59,20 @@ export default function App() {
   };
 
   return (
-    <div
-      className="relative w-full h-screen overflow-hidden"
-      style={{
-        background: 'linear-gradient(145deg, #1a1a2e 0%, #2d2a4a 40%, #3d3a5c 70%, #4a4565 100%)'
-      }}
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-            backgroundSize: '32px 32px'
-          }}
-        />
-      </div>
+    <div className="relative w-full h-screen overflow-hidden bg-[#1a1a2e]">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${harvardBg})`
+        }}
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Main Container - Phone Frame */}
-      <div className="relative h-full w-full max-w-[430px] mx-auto bg-gradient-to-b from-transparent to-purple-900/5">
+      <div className="relative h-full w-full max-w-[430px] mx-auto border-x border-white/20 bg-gradient-to-b from-transparent to-purple-900/5">
         <AnimatePresence mode="wait">
           {currentPage === 'main' && (
             <motion.div
