@@ -1,7 +1,7 @@
 
-  # HXR Conference 2026 Prototype
+  # HXR Conference 2026 Interface
 
-  Interface for HXR Conference 2026
+  Interface for HXR Conference 2026: Virtual Passport
 
   ## Running the code
 
