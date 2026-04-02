@@ -1,7 +1,7 @@
 
   # HXR Conference 2026 Prototype
 
-  This is a code bundle for HXR Conference 2026 Prototype. The original project is available at https://www.figma.com/design/F9XDilNRvTCGEPl0Y3ODrj/HXR-Conference-2026-Prototype.
+  Interface for HXR Conference 2026
 
   ## Running the code
 
