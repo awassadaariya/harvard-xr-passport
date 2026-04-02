@@ -1,4 +1,11 @@
 // Real Unsplash images for events and rooms
+import room109 from '../../../assets/109.jpeg';
+import roomPiper from '../../../assets/piper.jpeg';
+import roomRm01 from '../../../assets/rm01.jpeg';
+import roomRm02 from '../../../assets/rm02.jpeg';
+import roomSc01 from '../../../assets/sc01.jpeg';
+import roomSc02 from '../../../assets/sc02.jpeg';
+import roomSc03 from '../../../assets/sc03.jpeg';
 
 export const eventImages: Record<string, string> = {
   'evt1': 'https://images.unsplash.com/photo-1757143137392-0b1e1a27a7de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcGVuaW5nJTIwY2VyZW1vbnklMjBjb25mZXJlbmNlfGVufDF8fHx8MTc3MjgxODUxOXww&ixlib=rb-4.1.0&q=80&w=1080', // Opening
@@ -17,15 +24,15 @@ export const eventImages: Record<string, string> = {
 };
 
 export const roomImages: Record<string, string> = {
-  'piper': 'https://images.unsplash.com/photo-1764471444363-e6dc0f9773bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWRpdG9yaXVtJTIwdGhlYXRlciUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzcyODE4NTIyfDA&ixlib=rb-4.1.0&q=80&w=1080', // Piper Auditorium
-  '109': 'https://images.unsplash.com/photo-1703355685952-03ed19f70f51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb25mZXJlbmNlJTIwcm9vbXxlbnwxfHx8fDE3NzI4MDAwMTV8MA&ixlib=rb-4.1.0&q=80&w=1080', // Room 109
-  'rm01': 'https://images.unsplash.com/photo-1745970649913-2edb9dca4f74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc2hvcCUyMHNwYWNlfGVufDF8fHx8MTc3MjgxODUyM3ww&ixlib=rb-4.1.0&q=80&w=1080', // RM 01
-  'rm02': 'https://images.unsplash.com/photo-1764025130362-0162c3dd2035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwbGFiJTIwbW9kZXJufGVufDF8fHx8MTc3MjgxODUyM3ww&ixlib=rb-4.1.0&q=80&w=1080', // RM 02
+  'piper': roomPiper,   // Piper Auditorium
+  '109': room109,       // Room 109
+  'rm01': roomRm01,     // RM 01
+  'rm02': roomRm02,     // RM 02
   'chauhaus': 'https://images.unsplash.com/photo-1764173039259-3cdf3d9a56e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb3VuZ2UlMjBjYWZlJTIwbmV0d29ya2luZ3xlbnwxfHx8fDE3NzI4MTg1MjN8MA&ixlib=rb-4.1.0&q=80&w=1080', // Chauhaus
   '124': 'https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBtZWV0aW5nJTIwcm9vbXxlbnwxfHx8fDE3NzI3MjAxODF8MA&ixlib=rb-4.1.0&q=80&w=1080', // Room 124
-  'sc01': 'https://images.unsplash.com/photo-1762028892701-692dc360db08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGhpYml0aW9uJTIwYm9vdGglMjBzaG93Y2FzZXxlbnwxfHx8fDE3NzI4MTg1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080', // SC 01
-  'sc02': 'https://images.unsplash.com/photo-1703085542961-1880ed1ad35c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG93Y2FzZSUyMGRpc3BsYXklMjBleGhpYml0aW9ufGVufDF8fHx8MTc3MjgxODUyNHww&ixlib=rb-4.1.0&q=80&w=1080', // SC 02
-  'sc03': 'https://images.unsplash.com/photo-1760087616415-62270db23966?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwc2hvd2Nhc2UlMjBzdGF0aW9ufGVufDF8fHx8MTc3MjgxODUyOHww&ixlib=rb-4.1.0&q=80&w=1080', // SC 03
+  'sc01': roomSc01,     // SC 01
+  'sc02': roomSc02,     // SC 02
+  'sc03': roomSc03,     // SC 03
 };
 
 export const projectImages: Record<string, string> = {
